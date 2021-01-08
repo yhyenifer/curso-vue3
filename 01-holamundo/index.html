@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+<div id="app">
+    <h1>{{title}}</h1>
+    <h2>{{user.name}}</h2>
+    <p>permiso: {{user.age < 18 ? "Sin permisos" : "Con permisos"}}</p>
+    <p>Peliculas: {{movies[0]}}</p>
+    <hr>
+    <a v-bind:href="url" target="_blank">Google</a>
+    <hr>
+    <img v-bind:src="image" alt="" width="300">
+    <hr>
+    <!-- <h2 :class="user.classValue">
+        {{user.age >= 18 ? user.classValue = "good" : user.classValue = "error"  }}
+        Estado
+    </h2> -->
+    <!-- <h2 v-if="user.age >= 18" class="good">Eres mayor</h2> -->
+
+    <h2 v-if="user.age <=0 || user.age >= 110" class="rango_err">
+        Tu estas muerto o no has nacido
+    </h2>
+    <h2 v-else-if="user.age >= 18" class="good">Eres mayor</h2>
+    <h2 v-else class="error">Eres menor</h2>
+    <hr>
+    <ul >
+        <li v-for="(movie, index) in movies" :key="index">
+           {{index}} {{movie}}
+        </li>
+
+    </ul>
+
+</div>
+   <script src="./main.js" ></script>
+   <script>
+       const mountApp = app.mount("#app");
+    </script>
+</body>
+</html>

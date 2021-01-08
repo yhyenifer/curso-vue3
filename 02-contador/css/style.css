@@ -1,0 +1,37 @@
+.app{
+    display: block;
+    text-align: center;
+}
+.title{
+    color: #8F95D3;
+}
+
+.count{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+html, body{
+    background-color: #1C1C1C;
+}
+
+button{
+ border: none;
+ padding: 1rem;
+ font-size: 1rem;
+ margin: 0 0.5rem;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(146, 146, 146);
+}
+
+.suma{
+    background-color: #4C8577;
+    color: white;
+}
+.resta{
+    background-color: #944654;
+    color: white;
+}

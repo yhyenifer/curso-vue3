@@ -1,0 +1,52 @@
+{
+    "name": "Generador Degradados App",
+    "short_name": "generadorDegradadosApp",
+    "description": "generador de degradados",
+    "background_color":"#fff",
+    "theme_color": "#2196e8",
+    "start_url": "./?umt_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-CO",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./img/favicon.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+           "src": "./img/icon32.png",
+           "sizes": "32x32",
+           "type": "image/png"
+       },
+       {
+           "src": "./img/icon64.png",
+           "sizes": "64x64",
+           "type": "image/png"
+       },
+        {
+           "src": "./img/icon256.png",
+           "sizes": "256x256",
+           "type": "image/png"
+       },
+       {
+           "src": "./img/icon512.png",
+           "sizes": "512x512",
+           "type": "image/png"
+       },
+       {
+           "src": "./img/icon1024.png",
+           "sizes": "1024x1024",
+           "type": "image/png"
+       },
+       {
+           "src": "./img/maskable.png",
+           "sizes": "213x213",
+           "type": "image/png",
+           "purpose": "maskable"
+       }
+       
+    ]
+   
+   }

@@ -1,0 +1,14 @@
+.good{
+    color: green;
+    font-size: 2rem;
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
+}
+
+.rango_err{
+    color: gray;
+    font-size: 1rem;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="="Sitio dedicado a la generacion de degradados para css en tiempo real, hecho en vue 3"/>
+      <!-- metadata para pwa -->
+    <!-- modifica el color de barra de estado android -->
+    <meta name="theme-color" content="#2196e8">
+    <!-- optimizacion de seo -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content = "true">
+    <!-- modificar barra de estado en ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"/>
+    <title>Degradados</title>
+      <!-- iconos -->
+      <link rel="schorcut icon" href="./img/favicon.png" type="image/png">
+      <!-- icono al centro de la pantall cualquier dispo -->
+      <link rel="apple-touch-icon" href="./img/favicon.png">
+      <link rel="apple-touch-startup-image" href="./img/favicon.png">
+      <!-- manifest -->
+      <link rel="manifest" href="./manifest.json">
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!-- <a class="navbar-brand" href="#">
+            </a> -->
+            <h3 class="navbar-title">{{title}}</h3>
+          </div>
+        </div>
+      </nav>
+
+      <form action="" class="center-text">
+          <label>Color 1: 
+              <input type="color" name="color" id="fcolor" v-model="fcolor">
+          </label>
+          <label>Color 2: 
+            <input type="color" name="color2" id="scolor" v-model="scolor">
+        </label>
+      </form>
+      <p class="center-text">Hex 1: {{fcolor}} => Hex 2: {{scolor}}</p>
+      <hr>
+      <form action="">
+
+        <div class="orientation">
+            <label for="">
+                <input type="radio" value="right" v-model="orientation" >Right
+            </label>
+            <label for="">
+                <input type="radio" value="left" v-model="orientation" >Left
+            </label>
+            <label for="">
+                <input type="radio" value="top" v-model="orientation" >Top
+            </label>
+            <label for="">
+                <input type="radio" value="bottom" v-model="orientation" >Botton
+            </label>
+        </div>
+      </form>
+    
+      <div  class="area" :style="setColor">
+
+      </div>
+<hr>
+      <div>
+          <form action="">
+            <label>
+                <textarea class="border-none full-width center-text" :value="setColor" rows="4"></textarea>
+            </label>
+          </form>
+      </div>
+    </div>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+
+  </body>
+</html>
