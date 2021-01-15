@@ -1,0 +1,137 @@
++++/* selector de etiqueta */
+h1 {
+  background-color: cadetblue;
+}
+
+/* selectores de clase */
+.title {
+  color: yellow;
+}
+.text {
+  background-color: coral;
+}
+
+/* selectores de id */
+#text {
+  color: green;
+}
+
+/* selectores universales */
+* {
+  color: green;
+}
+
+/* selectores de atributo */
+/* selecciona los elementos con ese atributo */
+/* [href] {
+  color: gray;
+} */
+/* [href="#"] {
+  color: red;
+} */
+/* selecciona los elementos con ese atributo con ese valor una sola vez */
+/* [href~="#"] {
+  color: red;
+} */
+[class~="verde"] {
+  color: green;
+}
+/* selecciona los elementos con ese atributo y exactamente con ese valor o empieze con ese valor seguido de un - */
+[class|="verde"] {
+  color: yellow;
+}
+/* todo los que empiecen con ese valor o tengan solo ese atributo*/
+[class^="rojo"] {
+  color: purple;
+}
+/* todo los que terminan con ese valor o tengan solo ese atributo*/
+[class$="rojo"] {
+  color: steelblue;
+}
+/* todo los que contenga  ese valor */
+[class*="rojo"] {
+  color: brown;
+}
+
+/* selectores combinadores */
+/* el estilo se aplica al inferior, nunca al superior */
+/* hermano adyacente, hermano justo debajo */
+h1 + h2 {
+  color: yellowgreen;
+}
+h2 + h2 {
+  color: greenyellow;
+}
+
+/* hermano general, busca todos debajo con el mismo padre */
+h1 ~ h3 {
+  color: red;
+}
+
+/* selectores descendentes */
+p span {
+  font-weight: bold;
+}
+/* todos los que esten debajo de el */
+div span {
+  color: black;
+}
+
+/* selector de hijo directo */
+p > span {
+  color: blue;
+}
+/* herencia y cascada  y especificidad*/
+/* especificidad */
+/* etiquetas -> 1
+clases -> 10
+id -> 100
+estilos en linea 1000
+important -> gana todo */
+/* herencia */
+/* p {
+  color: purple;
+}
+a {
+  color: inherit;
+} */
+/* cascada */
+#parrafo {
+  color: violet;
+}
+.parrafo {
+  color: red;
+}
+a {
+  color: inherit;
+}
+p {
+  color: green;
+}
+
+/* reset menu llamado de clases estilo BEM */
+/* ul */
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* li */
+.main-menu__item {
+  line-height: 3;
+}
+
+/* a */
+.main-menu__link {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* menu active */
+.main-menu__link--active {
+  background-color: red;
+}
