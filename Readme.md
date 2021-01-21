@@ -390,3 +390,8 @@ usadas para hacer menus
 
 - ejemplo de menu
   ` .list__item{float: left; padding-right: 1em}`
+  
+## box-shadow
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
